@@ -81,3 +81,5 @@ function lengthOfLongestSubstring(string) {
 
   return maxLength;
 }
+
+lengthOfLongestSubstring('1111');
