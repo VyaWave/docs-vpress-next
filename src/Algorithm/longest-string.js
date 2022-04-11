@@ -82,4 +82,25 @@ function lengthOfLongestSubstring(string) {
   return maxLength;
 }
 
-lengthOfLongestSubstring('1111');
+console.info('=========   lengthOfLongestSubstring2  =========', lengthOfLongestSubstring('1111'));
+
+const lengthOfLongestSubstring2 = string => {
+  const mapping = new Map();
+
+  let max = 0,
+    start = 0;
+
+  for (let end = 0; end < string.length; end++) {
+    if (mapping.has(string[end])) {
+      start = Math.max(start, mapping.get(string[end]) + 1);
+    }
+
+    mapping.set(string[end], end);
+
+    max = Math.max(max, end - start + 1);
+  }
+
+  return max;
+};
+
+console.info('=========   lengthOfLongestSubstring2  =========', lengthOfLongestSubstring2('12345123'));
