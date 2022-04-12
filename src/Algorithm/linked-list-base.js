@@ -161,29 +161,29 @@ LinkedList.prototype.join = function (splitString) {
 let linkedList = new LinkedList();
 
 console.info('linkedList', linkedList);
-// linkedList.append(10);
-// linkedList.append(20);
-// linkedList.append(30);
+linkedList.append(10);
+linkedList.append(20);
+linkedList.append(30);
 
-// console.log(linkedList.join('--'));
+console.log(linkedList.join('--'));
 
-// linkedList.insert(0, 5);
-// linkedList.insert(2, 15);
-// linkedList.insert(4, 25);
-// console.log(linkedList.join('--'));
+linkedList.insert(0, 5);
+linkedList.insert(2, 15);
+linkedList.insert(4, 25);
+console.log(linkedList.join('--'));
 
-// console.log(linkedList.removeAt(0));
-// console.log(linkedList.removeAt(1));
-// console.log(linkedList.removeAt(2));
-// console.log(linkedList.join('--'));
+console.log(linkedList.removeAt(0));
+console.log(linkedList.removeAt(1));
+console.log(linkedList.removeAt(2));
+console.log(linkedList.join('--'));
 
-// console.log(linkedList.indexOf(20));
+console.log(linkedList.indexOf(20));
 
-// linkedList.remove(20);
+linkedList.remove(20);
 
-// console.log(linkedList.join('--'));
+console.log(linkedList.join('--'));
 
-// console.log(linkedList.find(10));
+console.log(linkedList.find(10));
 
-// linkedList.clear();
-// console.log(linkedList.size());
+linkedList.clear();
+console.log(linkedList.size());
