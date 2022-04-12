@@ -49,7 +49,6 @@ class LinkedList {
   // 在链表的指定位置插入节点
   insert = (val, index) => {
     if (this.isValidIndex(index)) {
-      console.error('===== No Valid Index ======');
       return false;
     }
 
@@ -178,9 +177,9 @@ linkedList.insert(2, 15);
 linkedList.insert(4, 25);
 console.log(linkedList.join('--'));
 
-// console.log(linkedList.removeAt(0));
-// console.log(linkedList.removeAt(1));
-// console.log(linkedList.removeAt(2));
+console.log(linkedList.removeAt(0));
+console.log(linkedList.removeAt(1));
+console.log(linkedList.removeAt(2));
 console.log(linkedList.join('--'));
 
 console.log(linkedList.indexOf(20));
