@@ -82,7 +82,7 @@ function lengthOfLongestSubstring(string) {
   return maxLength;
 }
 
-console.info('=========   lengthOfLongestSubstring2  =========', lengthOfLongestSubstring('1111'));
+console.info('========= lengthOfLongestSubstring2 =========', lengthOfLongestSubstring('1111'));
 
 const lengthOfLongestSubstring2 = string => {
   const mapping = new Map();
