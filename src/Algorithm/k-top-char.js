@@ -42,3 +42,28 @@ var topKFrequent = function (nums, k) {
 
   return topK;
 };
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number[]}
+ */
+const topKFrequentFunc = (nums, k) => {
+  const mapping = new Map();
+
+  let l = nums.length,
+    i = 0;
+
+  while (i < l) {
+    const char = nums[i];
+    const preCounter = mapping.get(char);
+    const counter = preCounter ? preCounter + 1 : 1;
+    mapping.set(char, counter);
+    i++;
+  }
+
+  return Array.from(mapping)
+    .sort((a, b) => b[1] - a[1])
+    .filter((it, i) => i <= k - 1)
+    .map(it => it[0]);
+};
