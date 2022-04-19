@@ -27,7 +27,7 @@ var maxArea = function (height) {
     i = 0;
 
   while (i < l) {
-    const max = Math.min(height[i],height[l]) * (l - i);
+    const max = Math.min(height[i], height[l]) * (l - i);
 
     ans = Math.max(ans, max);
 
@@ -3119,3 +3119,26 @@ const testData = [
 ];
 
 console.info('=========  maxArea  =========', maxArea(testData));
+
+const maxWaterArea = height => {
+
+  let l = height.length - 1 , i = 0, maxWater = 0;
+
+  while(i < l) {
+
+    const start = height[i], end = height[l];
+
+    const capacity = Math.min(start, end) * ( l - i );
+
+    maxWater = Math.max(capacity, maxWater)
+
+    if (start >= end) l --;
+    if (start < end) i ++;
+
+  }
+
+  return maxWater;
+};
+
+console.info('=========  maxWaterArea  =========', maxWaterArea(testData));
+
